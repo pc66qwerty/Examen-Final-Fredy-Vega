@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar Categoría{% endblock %}
+
+{% block content %}
+<h1>Agregar Nueva Categoría</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-success">Guardar Categoría</button>
+    <a href="{% url 'lista_categorias' %}" class="btn">Cancelar</a>
+</form>
+{% endblock %}

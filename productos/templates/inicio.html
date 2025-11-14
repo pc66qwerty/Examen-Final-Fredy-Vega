@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Tienda Web{% endblock %}
+
+{% block content %}
+<h1>Bienvenido a TiendaWeb</h1>
+<p style="font-size: 1.1em; color: #7f8c8d; margin-bottom: 30px;">Sistema de gestión de productos y categorías para tu emprendimiento.</p>
+
+<div class="card-grid">
+    <div class="card">
+        <h3>Categorías</h3>
+        <p style="color: #7f8c8d; margin: 15px 0;">Organiza y administra las categorías de tus productos de manera eficiente.</p>
+        <a href="{% url 'lista_categorias' %}" class="btn">Ver Categorías</a>
+    </div>
+    
+    <div class="card">
+        <h3>Productos</h3>
+        <p style="color: #7f8c8d; margin: 15px 0;">Gestiona tu catálogo completo de productos con toda la información necesaria.</p>
+        <a href="{% url 'lista_productos' %}" class="btn">Ver Productos</a>
+    </div>
+</div>
+
+<div class="info-box">
+    <h3 style="margin-top: 0;">Características del Sistema</h3>
+    <ul class="info-list">
+        <li>Gestión completa de productos</li>
+        <li>Organización por categorías</li>
+        <li>Control de inventario y stock</li>
+        <li>Interfaz intuitiva y fácil de usar</li>
+    </ul>
+</div>
+{% endblock %}
